@@ -26,7 +26,7 @@ public class AIConnector {
 		// NOTE: you must manually set API_KEY below using information retrieved from
 		// your IBM Cloud account.
 
-		String API_KEY = "M0RRdRTwqYlQniZdM_UP-FC3OMP9Zn7yeUyqSDjXVrrK";
+		String API_KEY = "<IBM-API-KEY>";
 
 		HttpURLConnection tokenConnection = null;
 		HttpURLConnection scoringConnection = null;
@@ -52,7 +52,7 @@ public class AIConnector {
 			}
 			// Scoring request
 			URL scoringUrl = new URL(
-					"https://us-south.ml.cloud.ibm.com/ml/v4/deployments/12c387ee-efa0-4308-8290-55d1f1202632/predictions?version=2021-09-08");
+					"URL of the instance got from IBM Cloud");
 			String iam_token = "Bearer " + jsonString.toString().split(":")[1].split("\"")[1];
 			scoringConnection = (HttpURLConnection) scoringUrl.openConnection();
 			scoringConnection.setDoInput(true);
